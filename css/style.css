@@ -1,17 +1,22 @@
 /* gogle font */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-a, a:link, a:hover {
+a,
+a:link,
+a:hover {
     text-decoration: none;
     color: #000;
 }
 
-ul,li,ol {
+ul,
+li,
+ol {
     list-style: none;
 }
 
@@ -28,7 +33,14 @@ img {
 }
 
 .header {
-    padding: 20px;
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+.page-title {
+    font-size: 24px;
+    margin-bottom: 10px;
 }
 
 .global-width {
@@ -37,10 +49,17 @@ img {
     padding: 0 16px;
 }
 
+.global-width p {
+    text-align: center;
+}
+
 .scroll-graphic {
     position: sticky;
-    top: 10%;
+    width: 50%;
+    margin: 0 auto;
+    top: 0;
     height: 100vh;
+    overflow-x: hidden;
 }
 
 .graphic-item {
@@ -53,21 +72,82 @@ img {
     left: 0;
     opacity: 0;
     transition: .5s all;
+    /* 브라우저에 미리 알려주기 - will-change */
+    will-change: opacity;
 }
+
 .visible {
     opacity: 1;
 }
+
 .scene-img {
     max-height: 100vh;
+    border: 1px solid white;
+    border-radius: 6px;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, .5),
+    inset 2px 3px 10px rgba(0, 0, 0, .7);
 }
 
 .scroll-text {
     position: relative;
 }
+
 .step {
-    margin-bottom: 60vh;
+    text-align: center;
+    margin-bottom: 55vh;
     padding: 8px 16px;
     border-radius: 10px;
-    background: rgba(255, 255, 255, .7);
-    box-shadow: 0 0 3px rgba(0, 0, 0, .3);
+    background: rgba(255, 255, 255, .8);
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, .2);
+}
+
+.step p {
+    text-shadow: 1px 0px 3px rgba(0, 0, 0, .1);
+}
+.bird {
+    width: 220px;
+    position: absolute;
+    left: 0;
+    bottom: 25%;
+    z-index: 2;
+    transform: translateX(-100%);
+    transition: 1.5s 0.5s linear;
+}
+
+[data-index="5"] .bird {
+    left: 30%;
+    bottom: 10%;
+}
+
+@media (max-width: 564px) {
+    .scroll-graphic {
+        top: 10%;
+        width: 80%;
+    }
+    .bird {
+        width: 100px;
+    }
+    .page-title {
+        font-size: 20px;
+    }
+    .global-width p {
+        text-align: center;
+        font-size: 14px;
+    }  
+    .step {
+        margin: 0 auto;
+        width: 360px;
+        text-align: center;
+        margin-bottom: 55vh;
+        padding: 8px 16px;
+        border-radius: 10px;
+        background: rgba(255, 255, 255, .8);
+        box-shadow: 1px 1px 3px rgba(0, 0, 0, .2);
+    }
+    
+    .step p {
+        line-height: 25px;
+        font-size: 13px;
+        text-shadow: 1px 0px 3px rgba(0, 0, 0, .1);
+    }
 }
