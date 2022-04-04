@@ -1,0 +1,73 @@
+/* gogle font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a, a:link, a:hover {
+    text-decoration: none;
+    color: #000;
+}
+
+ul,li,ol {
+    list-style: none;
+}
+
+html {
+    font-family: 'Poppins', sans-serif;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    image-rendering: -webkit-optimize-contrast;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+}
+
+.header {
+    padding: 20px;
+}
+
+.global-width {
+    max-width: 620px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+.scroll-graphic {
+    position: sticky;
+    top: 10%;
+    height: 100vh;
+}
+
+.graphic-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: .5s all;
+}
+.visible {
+    opacity: 1;
+}
+.scene-img {
+    max-height: 100vh;
+}
+
+.scroll-text {
+    position: relative;
+}
+.step {
+    margin-bottom: 60vh;
+    padding: 8px 16px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, .7);
+    box-shadow: 0 0 3px rgba(0, 0, 0, .3);
+}
